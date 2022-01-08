@@ -16,8 +16,12 @@ export default class Play extends Scene {
     earth.x = -500;
 
     const sun = new Sun();
+    sun.x = 700;
+    sun.y = -200;
 
     this.addChild(stars, footer, earth, sun);
+
+    this.filters = [sun._blast];
   }
 
   /**
