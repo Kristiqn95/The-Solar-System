@@ -4,6 +4,8 @@ import Earth from "../components/Earth";
 import Stars from "../components/Stars";
 import Sun from "../components/Sun";
 
+import { Viewport } from "pixi-viewport";
+import config from "../config";
 export default class Play extends Scene {
   async onCreated() {
     const footer = new Footer();
@@ -19,9 +21,14 @@ export default class Play extends Scene {
     sun.x = 700;
     sun.y = -200;
 
+    this.config = config;
+
+
+
     this.addChild(stars, footer, earth, sun);
 
-    this.filters = [sun._blast];
+    const viewport = this.parent.parent;
+    viewport.filters = [sun.blast];
   }
 
   /**
