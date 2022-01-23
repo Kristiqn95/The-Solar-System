@@ -7,7 +7,7 @@
  * @param {Boolean} [ignoreRatio = true]
  * @param {Boolean} [overscale = false] - if true the scaled elememnt may have scale bigger then 1
  */
- export function fit(
+export function fit(
   element,
   { width, height },
   ignoreRatio = false,
